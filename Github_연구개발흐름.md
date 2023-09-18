@@ -1,4 +1,5 @@
 ## 1. 깃허브 기반의 공개SW 연구개발 플로우
+    - 0. Projcect Board & MileStones 
     - 1. Issue 생성 -> Commit & Push
     - 2. Issue 기반의 브랜치 생성 -> Dev/ Commit & Push
     - 3. Pull Request 요청
