@@ -13,63 +13,54 @@
 > Issue = 기능 개발, 버그, 개선 사항 등등 모든 작업들을 의미
 > 이슈를 생성시 제목, 내용, 라벨, 담당자, 마일스톤, 프로젝트 등의정보를 포함.
 # 이러한 이슈들을 Github Project, Github Milestone을 이용하면  →   프로젝트 작업의 진행 상황을 파악하기 쉬움.
-
-
 ```
 
-> * Issue 발행
-> * Issue란?
 > * Issue Template
-> Issue Template 등록
-> Issue Template 사용법
-> Issue Template 파일
-> Issue 작업
-> 등록된 issue 살펴 보기
-> Issue 연동
-> Issue 기반 Branch 생성
-![Uploading image.png…]()
+> * Issue 기반 Branch 생성
+> * Project Board, Milestones
 
 
-## 3. Pull Request[Code Review]
-> Code Review
+## 3. Pull Request
+```
+프로젝트의 원본 저장소에 변경 사항을 제안하고, 그 변경 사항을 리뷰 및 토론하는 프로세스
+PR 요청시 Github Actions 트리거를 발생시켜 코드 품질 관리 및 빌드/테스트 작업을 실행
+- 리뷰어는 코드 품질 도구의 실행 결과를 참조하여 메인 브랜치에 Merge or Close.
+- 코드 품질 관리 도구 종류 : CodeQL, SonarQube, Travis-CI, Jenkins, Github Actions Workflows etc.
+```
+> * PR Template
+> * Github Action CI/CD
+
+## 4. Code Review
     
     Approve: 코드에 대한 의문점이 없다면 승인 .
     Comment: 간단한 피드백 제출
     Request changes: 해당 코드에 문제가 있다고 판단되며 코드를 반드시 수정 요구
     
 
-## 4. CI & Test Coverage 
-    ``GitHub Marketplace Public Repository를 이용하면 대부분 무료로 이용 가능``
-
-> CI 도구 (Travis) 사용법
-> 
-    Merge pull request를 통해서 해당 작업(issue)을 반영했다면 Travis가 Build 할 때 작성된
-    Test Code 기반으로 Coverage 정보를 위처럼 자동으로 코멘드를 추가해줍니다.
-    누군가가 테스트 코드를 작성하지 않았다면 Change from base 항목에서 - 표시가 됩니다.
-    이렇게 해당 작업마다 커버리지를 표시하는 것이 전체 커버리지를 높이고 그 값을 유지하는 좋은 방법이다.
-> 테스트 커버지리 표시
-
-
 ## 5. Wiki
+```
+공개 소프트웨어 연굴 개발 프로젝트에 관련된 사항을 문서화하는것은 프로젝트의 투명성, 지식공유, 협업의 원활함을 위해 필요
+
+> 사용자용 
+- 릴리즈 노트, 시스템 요구 사항, 설치 가이드, 사용자 매뉴얼, 이전버전과 호환성을 유지하는 방법, 기능 리스트
+
+> 개발자용 
+- 소스 코드로 작업하는 법, 빌드 방법, 아키텍처의 구성, 
+개발 프로세스 개요, 디버깅 방법, 테스트 자동화 방법, 
+패치를 제출하는 방법. API 활용 방법
+
+> 프로젝트 활성화를 위한 기타 문서 
+- 라이선스, 제품 로드 맵, 개발 전략, 문서화 참여 방법, 도입 사례, 각종 백서
+```
 
 
-## 6. 깃헙 칸반보드 및 ZenHub 사용법 `이슈들이 발급되면 그것을 한눈에 보는 것은 기존 UI에서는 어렵습니다. 이런 문제를 칸반보드 형식으로 해결해주는 것이 ZenHub`
-
-
-7. Milestone `전체적인 작업에 진행 척도를 가시적으로 확인하기 좋다 `
-8. Labels `Epic은 Milestone과 비슷하게 이해하시면 됩니다. 큰 작업(Issue)이 있다면 그 작업(Issue)을 여러 Issue로 등록하고 한 묶음으로 관리하는 것`
-9. Github Action
-> Github Action 만들기
-> 
-   java ==> gradle.yml
-    
-> Action Workflows
-
-10. Badge
-11. READEME.md
-12. LICENSE.md
-13. CONTRIBUTING.md
-14. CODE_OF_CONDUCT.md
-15. .gitmessage.txt
-16. .all-contributorsrc
-17. Issue-template
+## 깃허브 연구개발을 위한 요소들.
+```
+* Badge ( 프로젝트 레포지토리의 활성화를 위한 시각화 )
+* READEME.md
+* LICENSE.md
+* CONTRIBUTING.md
+* CODE_OF_CONDUCT.md
+* 기여자 라이선스 협약(CLA)
+* Discussions 
+```
