@@ -5,7 +5,7 @@
     - 4. Code Review 완료 
     - 5. 메인 Branch 병합 및 릴리즈 
 
-2. Issue 관리
+## 2. Issue 관리
 > * Issue 발행
 > * Issue란?
 > * Issue Template
@@ -18,7 +18,7 @@
 > Issue 기반 Branch 생성
 
 
-3. Pull Request[Code Review]
+## 3. Pull Request[Code Review]
 > Code Review
     
     Approve: 코드에 대한 의문점이 없다면 승인 .
@@ -26,7 +26,7 @@
     Request changes: 해당 코드에 문제가 있다고 판단되며 코드를 반드시 수정 요구
     
 
-4. CI & Test Coverage 
+## 4. CI & Test Coverage 
     ``GitHub Marketplace Public Repository를 이용하면 대부분 무료로 이용 가능``
 
 > CI 도구 (Travis) 사용법
@@ -38,10 +38,10 @@
 > 테스트 커버지리 표시
 
 
-5. Wiki
+## 5. Wiki
 
 
-6. 깃헙 칸반보드 및 ZenHub 사용법 `이슈들이 발급되면 그것을 한눈에 보는 것은 기존 UI에서는 어렵습니다. 이런 문제를 칸반보드 형식으로 해결해주는 것이 ZenHub`
+## 6. 깃헙 칸반보드 및 ZenHub 사용법 `이슈들이 발급되면 그것을 한눈에 보는 것은 기존 UI에서는 어렵습니다. 이런 문제를 칸반보드 형식으로 해결해주는 것이 ZenHub`
 
 
 7. Milestone `전체적인 작업에 진행 척도를 가시적으로 확인하기 좋다 `
