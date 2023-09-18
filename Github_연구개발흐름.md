@@ -6,6 +6,14 @@
     - 5. 메인 Branch 병합 및 릴리즈 
 
 ## 2. Issue 관리
+```
+프로젝트 진행 중 발생할 수 있는 문제,기능 개선 등의 부분을 기록하고 추적하는 일종의 “할 일 목록”
+“할 일 목록”이 어떻게 처리되고 있는지 진행 상황을 파악하기 위해.
+이슈는 새로운 기능 제안, 프로젝트에 대한 질문과 의견을 나눈는 공간으로도 활용
+
+> Issue = 기능 개발, 버그, 개선 사항 등등 모든 작업들을 의미
+```
+
 > * Issue 발행
 > * Issue란?
 > * Issue Template
@@ -16,6 +24,7 @@
 > 등록된 issue 살펴 보기
 > Issue 연동
 > Issue 기반 Branch 생성
+![Uploading image.png…]()
 
 
 ## 3. Pull Request[Code Review]
