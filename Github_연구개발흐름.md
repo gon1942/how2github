@@ -5,6 +5,8 @@
     - 3. Pull Request 요청
     - 4. Code Review 완료 
     - 5. 메인 Branch 병합 및 릴리즈 
+    
+    > * Template를 활용한 일관된 형식의 이슈, 커밋, 풀리퀘스트
 
 ## 2. Issue 관리
 ```
