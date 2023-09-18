@@ -1,10 +1,9 @@
 ## 1. 깃허브 기반의 공개SW 연구개발 플로우
-    - Issue 생성 -> Commit & Push
-    - Pull Request 요청 -> Code Review 진행
-    - Code Review 완료 -> 특정 Branch에 반영
-    - 특정 Branch 수정시 자동 CI Build 작업 진행 -> 테스트 코드 실행
-    - 테스트 커버지리 표시
-    - 
+    - 1. Issue 생성 -> Commit & Push
+    - 2. Issue 기반의 브랜치 생성 -> Dev/ Commit & Push
+    - 3. Pull Request 요청
+    - 4. Code Review 완료 
+    - 5. 메인 Branch 병합 및 릴리즈 
 
 2. Issue 관리
 > * Issue 발행
