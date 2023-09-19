@@ -1,3 +1,7 @@
+## Add Contributors
+
+### Add Contributor in README.md 
+```
 name: Add contributors
 on:
   schedule:
@@ -21,3 +25,4 @@ jobs:
         PATH: '/README.md'
         COMMIT_MESSAGE: 'docs(README): update contributors'
         AVATAR_SHAPE: 'round'
+```
