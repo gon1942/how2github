@@ -19,6 +19,7 @@
 
 ## Sample Commit Msg Chk
 >  아래 예제의 코드는 Pull Request의 커밋 메시지가 지정된 패턴과 일치하지 않을 때, PR에 댓글을 작성하여 사용자에게 알림을 보내는 GitHub Actions 워크플로우를 정의한 것입니다.
+[Commit-Msg-Check.yml]([https://hamonize.github.io](https://github.com/gon1942/how2github/blob/main/04.how2-actions/ex.commitMsgChk.yml)/)
 ```
 name: 'Commit Message Check'
 on:
