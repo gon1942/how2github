@@ -17,9 +17,15 @@
 > 5. 자동화 및 통합: CI/CD 파이프라인과 통합하여, 코드가 빌드 및 배포되기 전에 커밋 메시지 규칙을 체크하고, 만족하지 않는 경우 자동으로 빌드를 실패하도록 설정할 수 있습니다.
 > 6. 보안 강화: 커밋 메시지 체크를 통해 보안 문제나 민감한 정보가 커밋 메시지에 노출되는 것을 방지하여 보안을 강화할 수 있습니다.
 
+## 커밋 템플릿 적용:
+> * 커밋 템플릿을 사용하기 위한 준비사항으로는 커밋 템프릿 문서와 적용 가이드( 리드미, 개발 가이드 문서등등) 공유 입니다. 
+> * 
+> * 커밋 템플릿 형식을 [Sample Commit-Template](https://github.com/gon1942/how2github/blob/main/05.how2-template/commit_template.md) 참조하여 사용하시면 됩니다. 
+> 
 ## Sample Commit Msg Chk
 >  아래 예제의 코드는 Pull Request의 커밋 메시지가 지정된 패턴과 일치하지 않을 때, PR에 댓글을 작성하여 사용자에게 알림을 보내는 GitHub Actions 워크플로우를 정의한 것입니다.
 > [Sample Commit-Msg-Check](https://github.com/gon1942/how2github/blob/main/04.how2-actions/05_Sample_CommitMsgChk.yml)
+
 ```
 name: 'Commit Message Check'
 on:
