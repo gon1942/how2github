@@ -30,4 +30,5 @@ Discussions는 더 일반적인 대화와 정보 공유, 질의응답 등의 커
 
 
 
+![image](https://github.com/gon1942/how2github/assets/31919227/0341c498-d595-4cb7-84af-55454e670166)
 
