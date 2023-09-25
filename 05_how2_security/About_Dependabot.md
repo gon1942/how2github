@@ -1,6 +1,9 @@
 ## Dependabot 정의
+
 > Dependabot은 GitHub에서 제공하는 보안 기능 중 하나로, 프로젝트의 종속성(dependencies)을 자동으로 업데이트 해주는 도구입니다.
+> 
 > Dependabot은 프로젝트의 dependencies를 모니터링하여, 새로운 버전이 릴리즈되면 해당 업데이트를 자동으로 제안해줍니다.
+> 
 > 이를 통해 사용자는 최신의 종속성을 유지하며, 보안 취약점이나 버그를 해결할 수 있습니다.
 
 ![image](https://github.com/gon1942/how2github/assets/31919227/0c77398f-0c83-4b23-9e98-ac17349c2506)
@@ -20,6 +23,7 @@
 
 ### Dependabot 설정 파일 생성
 > GitHub 레포지토리의 루트 디렉토리에 .github/dependabot.yml 파일을 생성합니다.
+> 
 > 해당 파일에 원하는 설정을 작성합니다. 예를 들어, 다음과 같이 작성할 수 있습니다:
 ```
 yaml
