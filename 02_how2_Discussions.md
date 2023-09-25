@@ -29,6 +29,6 @@ Discussions는 더 일반적인 대화와 정보 공유, 질의응답 등의 커
 >    필요한 경우 토론을 수정, 삭제, 핀 등의 관리 작업을 수행합니다.
 
 
-
+### Discussions 예시 화면
 ![image](https://github.com/gon1942/how2github/assets/31919227/0341c498-d595-4cb7-84af-55454e670166)
 
