@@ -63,8 +63,10 @@ jobs:
         name: sbom
         path: ./_manifest/spdx_2.2/
 ```
-> 이 예제에서는 <YourProjectName> 을 프로젝트의 이름으로 교체하고,
-> <YourName>을 소프트웨어 소유자의 이름으로 교체합니다.
-> .github/workflows/하위에 워크플로우 작성합니다.
+> 이 예제에서는 <YourProjectName> 을 프로젝트의 이름으로 교체하고,\
+> <YourName>을 소프트웨어 소유자의 이름으로 교체합니다.\
+> .github/workflows/하위에 워크플로우 작성합니다.\
 > Sbom.yml 워크플로우가 실행이 되면 Github Artifacts 와 레포지토리에 업로드된 SBOM을 확인하실 수 있습니다.
 >
+
+![image](https://github.com/gon1942/how2github/assets/31919227/c7cba1fc-51b5-4d40-8d5f-40155d32a23c)
