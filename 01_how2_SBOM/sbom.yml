@@ -1,0 +1,48 @@
+name: SBOM upload and commit
+
+on:
+  workflow_dispatch: # 워크플로우를 수동으로 트리거할 수 있게 해줍니다.
+  push: # push 이벤트가 발생할 때 워크플로우를 실행합니다.
+    branches: ["master"] # master 브랜치에서 발생하는 push 이벤트에만 반응합니다.
+
+env:
+  DeleteManifestDirIfPresent: 'true' # 환경 변수를 설정합니다. sbom-tool이 사용할 수 있습니다.
+  
+jobs:
+  SBOM-upload:
+    runs-on: ubuntu-latest # 이 작업은 ubuntu-latest 러너에서 실행됩니다.
+    permissions: 
+      packages: write
+      id-token: write
+      contents: write
+      actions: write
+      statuses: write
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3 # 레포지토리 코드를 체크아웃합니다.
+      
+    - name: Generate SBOM
+      run: | # 이 단계에서는 sbom-tool을 사용하여 SBOM을 생성합니다.
+        curl -Lo $RUNNER_TEMP/sbom-tool https://github.com/microsoft/sbom-tool/releases/latest/download/sbom-tool-linux-x64
+        chmod +x $RUNNER_TEMP/sbom-tool
+        $RUNNER_TEMP/sbom-tool generate -b . -bc . -pn git_command -pv 1.0.0 -ps gon1942
+        
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3 # 생성된 SBOM을 아티팩트로 업로드합니다.
+      with:
+        name: sbom
+        path: _manifest/spdx_2.2
+
+    - name: Commit and push SBOM to repository
+      run: | # SBOM을 레포지토리에 커밋하고 푸시합니다.
+        git config --global user.name 'GitHub Actions'
+        git config --global user.email 'actions@github.com'
+        git add _manifest/spdx_2.2/*
+        git commit -m "Add generated SBOM"
+        git push
+      
+    - name: SBOM upload
+      uses: advanced-security/spdx-dependency-submission-action@v0.0.1 # 최종적으로 생성된 SBOM을 다른 위치에 업로드합니다.
+      with:
+        filePath: "./_manifest/spdx_2.2/"
