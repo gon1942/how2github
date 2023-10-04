@@ -1,99 +1,99 @@
-## 1. 깃허브 기반의 공개SW 연구개발 플로우
-    - 0. Projcect Board & MileStones 
-    - 1. Issue 생성 -> Commit & Push
-    - 2. Issue 기반의 브랜치 생성 -> Dev/ Commit & Push
-    - 3. Pull Request 요청
-    - 4. Code Review 완료 
-    - 5. 메인 Branch 병합 및 릴리즈 
-    
-    > * Template를 활용한 일관된 형식의 이슈, 커밋, 풀리퀘스트
 
-## 2. Issue 관리
+
+<h1 align="center">How2github</h1>
+
+
+<p align="center">
+  <a href="#dart-about">About</a> &#xa0; | &#xa0; 
+  <a href="#white_check_mark-github-인터페이스-이해하기">Github 인터페이스 이해하기</a> &#xa0; | &#xa0;
+  <a href="#white_check_mark-github-워크플로우에-필요한-핵심-파일들">GitHub 워크플로우에 필요한 핵심 파일들</a> &#xa0; | &#xa0;
+  <a href="#white_check_mark-how2github-폴더-구조">How2Github 폴더 구조</a> &#xa0; | &#xa0;
+</p>
+
+<br>
+
+## :dart: About ##
+
+how2github 저장소에 오신 것을 환영합니다!\
+이 저장소는 GitHub 기반 워크플로우를 사용하는데있어서 필요한 정보를 제공하는 것을 목적으로 합니다.\
+GitHub을 처음 사용하는 분이든 특정 기능에 대한 간단한 복습이 필요하신 분이든, 여기서 필요한 정보를 찾을 수 있습니다.\
+
+1. GitHub 인터페이스에 대한 이해.
+2. GitHub 워크플로우에 필요한 핵심 파일들.
+3. 이슈, 커밋, PR, 릴리즈, 컨트리뷰터를 위한 환경 구성에 대한 이해 및 사용법.
+
+이 외 필요한 부분이 있으신 경우 [Issue](https://github.com/gon1942/how2github/issues/new?assignees=gon1942&labels=enhancement&projects=&template=%EA%B8%B0%EB%8A%A5-%EC%9A%94%EC%B2%AD.md&title=%5BFEATURE%5D) 또는 [Discussion](https://github.com/gon1942/how2github/discussions/new?category=request)으로 요청해 주세요.
+
+
+## :white_check_mark: Github 인터페이스 이해하기  ##
+> GitHub의 핵심적인 부분입니다. 저장소는 프로젝트의 코드, 문서, 그리고 관련 리소스를 저장하는 곳입니다.
 ```
-프로젝트 진행 중 발생할 수 있는 문제,기능 개선 등의 부분을 기록하고 추적하는 일종의 “할 일 목록”
-
-> Github의 Issues는 개발에서 발견되는 버그, 기능, 개선 사항 등등을 추적하고 관리
-> Issue = 기능 개발, 버그, 개선 사항 등등 모든 작업들을 의미
-> 이슈를 생성시 제목, 내용, 라벨, 담당자, 마일스톤, 프로젝트 등의정보를 포함.
-# 이러한 이슈들을 Github Project, Github Milestone을 이용하면  →   프로젝트 작업의 진행 상황을 파악하기 쉬움.
-```
-
-> * Issue Template (GITHUB에서 재공하는 이슈 템플릿을 사용하거나, 별도의 이슈 템플릿을 작성하여 사용 가능.)
-> * Issue 기반 Branch 생성
-> * Project Board, Milestones
-
-* 라벨 관리
-```
-
-생성된 이슈는 오픈과 클로즈 별로 리스트 형태로 보여지는데 이슈들이 많아진경우 이슈를 찾기가 힘들어 지는 현상이 발생.  
-이런 경우 라벨을 사용하게되면 이슈 유형별로 라벨링을해서 찾고자하는 이슈를 손쉽게 확인 및 처리가 가능.
-
-```
-
-* 마일스톤 ( 사전적 의미는 "이정표" ) 관리
-```
-
-이슈와 이슈별로 라벨링을 하였지만. 현재 상태에서는 유사한 이슈들이 존재할것이고 이를 관리하기에는 어려움이 존재.  
-이를 위해 마일스톤을 사용하는것이 효율적인 프로젝트의 이슈 관리.
-( 전체적인 작업에 진행 척도를 가시적으로 확인할 수 있다.)
-
-```
-
-* PROJECTS 관리
-```
-
-프로제트에서 발생하는 모든 이슈별로 라벨링을하고 마일스톤을 사용하하지만 이와 함께 GITHUB의 PROJECTS을 사용하는것을 추천. 
-이기능은 칸반, 트렐로등과같이 유산한 기능을 제공하고있어 프로젝트의 이슈들의 시각하하여 프로젝트가 현재 진행중이고, 목표하고 있는것이 무엇인지 한 눈에 파악하기가 쉬움.
-
-> 칸반, 트렐로, Github의 Projects등의 가장 큰 특징은 작업의 시각화라 할 수 있음.
-
-```
-
-## 3. Pull Request
-```
-프로젝트의 원본 저장소에 변경 사항을 제안하고, 그 변경 사항을 리뷰 및 토론하는 프로세스
-PR 요청시 Github Actions 트리거를 발생시켜 코드 품질 관리 및 빌드/테스트 작업을 실행
-- 리뷰어는 코드 품질 도구의 실행 결과를 참조하여 메인 브랜치에 Merge or Close.
-- 코드 품질 관리 도구 종류 : CodeQL, SonarQube, Travis-CI, Jenkins, Github Actions Workflows etc.
-```
-> * PR Template
-> * Github Action CI/CD
-
-## 4. Code Review
-    
-    Approve: 코드에 대한 의문점이 없다면 승인 .
-    Comment: 간단한 피드백 제출
-    Request changes: 해당 코드에 문제가 있다고 판단되며 코드를 반드시 수정 요구
-    
-## 5. Release
-```
-- 수동 or 자동(Github Action) 배포 가능한 소프트웨어를 제공하여 사용자가 다운로드하고 사용
-```
-
-## 6. Wiki
-```
-공개 소프트웨어 연굴 개발 프로젝트에 관련된 사항을 문서화하는것은 프로젝트의 투명성, 지식공유, 협업의 원활함을 위해 필요
-
-> 사용자용 
-- 릴리즈 노트, 시스템 요구 사항, 설치 가이드, 사용자 매뉴얼, 이전버전과 호환성을 유지하는 방법, 기능 리스트
-
-> 개발자용 
-- 소스 코드로 작업하는 법, 빌드 방법, 아키텍처의 구성, 
-개발 프로세스 개요, 디버깅 방법, 테스트 자동화 방법, 
-패치를 제출하는 방법. API 활용 방법
-
-> 프로젝트 활성화를 위한 기타 문서 
-- 라이선스, 제품 로드 맵, 개발 전략, 문서화 참여 방법, 도입 사례, 각종 백서
+Code: 저장소의 코드와 파일들을 볼 수 있습니다.
+Issues: 프로젝트와 관련된 문제점이나 제안사항을 토론할 수 있는 곳입니다.
+Pull Requests: 코드 변경을 제안하고, 리뷰 및 병합을 관리하는 섹션입니다.
+Actions: CI/CD와 같은 자동화된 워크플로우를 설정하고 관리하는 부분입니다.
+Projects: 칸반 보드 스타일로 프로젝트 관리를 도와줍니다.
+Wiki: 프로젝트와 관련된 문서를 작성하고 공유하는 공간입니다.
+Settings: 저장소 설정, 권한 관리, 웹훅 설정 등을 할 수 있는 곳입니다.
 ```
 
 
-## 깃허브 연구개발을 위한 요소들.
-```
-* Badge ( 프로젝트 레포지토리의 활성화를 위한 시각화 )
-* READEME.md
-* LICENSE.md
-* CONTRIBUTING.md
-* CODE_OF_CONDUCT.md
-* 기여자 라이선스 협약(CLA)
-* Discussions 
-```
+## :white_check_mark: GitHub 워크플로우에 필요한 핵심 파일들 ##
+
+1. README.md -> [리드미 사용법 바로가기!](https://github.com/gon1942/how2github/blob/main/00.Basic_Github/01.About_READEME.md)
+- 목적: 프로젝트의 기본 설명, 사용 방법, 기여 방법 등을 소개합니다.
+- 위치: 저장소의 루트 디렉토리에 위치합니다.
+- 팁: Markdown 언어를 사용하여 작성하며, 이미지, 링크, 코드 등을 포함할 수 있습니다.
+2. .gitignore -> [사용법 바로가기.](https://github.com/gon1942/how2github/blob/main/00.Basic_Github/06.About_.gitignore.md)
+- 목적: Git에서 추적하지 않을 파일 또는 디렉토리를 지정합니다.
+- 위치: 저장소의 루트 디렉토리에 위치합니다.
+- 팁: 특정 프로그래밍 언어나 환경에 대한 템플릿을 gitignore.io에서 찾아 사용할 수 있습니다.
+3. LICENSE -> [라이선스 바로가기](https://github.com/gon1942/how2github/blob/main/00.Basic_Github/02.About_LICENSE.md)
+- 목적: 프로젝트에 대한 라이선스를 지정합니다.
+- 위치: 저장소의 루트 디렉토리에 위치합니다.
+- 팁: 다양한 라이선스 중에서 프로젝트에 적합한 것을 선택합니다. GitHub는 라이선스를 자동으로 인식하고 표시합니다.
+4. CONTRIBUTING.md -> [바로가기](https://github.com/gon1942/how2github/blob/main/00.Basic_Github/04.About_CONTRIBUTING.md)
+- 목적: 프로젝트에 기여하는 방법에 대한 가이드를 제공합니다.
+- 위치: 저장소의 루트 디렉토리에 위치합니다.
+- 팁: 기여 프로세스, 코드 스타일, 테스트 방법 등을 명시합니다.
+5. .github
+- 목적: GitHub Actions 워크플로우, 이슈 및 PR 템플릿 등 GitHub 관련 설정을 저장합니다.
+- 위치: .github 디렉토리 안에 위치합니다.
+- 팁: 이 디렉토리 안에 workflows/, ISSUE_TEMPLATE/, PULL_REQUEST_TEMPLATE/ 등의 서브 디렉토리를 포함할 수 있습니다.
+6. CODE_OF_CONDUCT.md -> [바로가기](https://github.com/gon1942/how2github/blob/main/00.Basic_Github/03.About_CODE_OF_CONDUCT.md)
+- 목적: 프로젝트 참여자들에게 기대하는 행동과 원칙을 명시합니다.
+- 위치: 저장소의 루트 디렉토리에 위치합니다.
+- 팁: GitHub는 코드 행동 강령 템플릿을 제공하므로, 이를 활용하여 작성할 수 있습니다.
+&#xa0;
+
+<a href="#top">Back to top</a>
+
+## 깃허브 프로젝트 관리에 필요한 요소들:
+1. 이슈 관리 -> [이슈 관리 가이드 클릭!](https://github.com/gon1942/how2github/blob/main/07_%EC%9D%B4%EC%8A%88%EA%B4%80%EB%A6%AC/About_Issue.md)
+2. 깃허브 엑션 CI/CD ->  [깃허브 엑션을 이용한 이해 및 사용법 클릭!](https://github.com/gon1942/how2github/tree/main/04.how2-actions)
+3. 깃허브 보안관리 -> [깃허브에서 제공하는 보안관리 이해 및 사용법 클릭!](https://github.com/gon1942/how2github/tree/main/05_how2_security)
+4. 릴리즈 관리 - [릴리즈 관리 이해 및 사용법 클릭!](https://github.com/gon1942/how2github/tree/main/03.how2-release)
+
+
+
+## :white_check_mark: How2Github 폴더 구조 ##
+
+:heavy_check_mark: 00.Basic_Github : 리드미, 라이선스, Code_of_conduct, Contributing, Wiki. - [클릭!](https://github.com/gon1942/how2github/tree/main/00.Basic_Github)\
+:heavy_check_mark: 01_how2_SBOM : 깃허브 엑션을 활용한 SBOM - [클릭!](https://github.com/gon1942/how2github/blob/main/01_how2_SBOM/About_Sbom.md)\
+:heavy_check_mark: 02_how2_Discussions : 커뮤니케이션을 위한 Discussions - [클릭!](https://github.com/gon1942/how2github/blob/main/02_how2_Discussions/About_Discussions.md)\
+:heavy_check_mark: 03.how2-release : 릴리즈 사용법 - [클릭!](https://github.com/gon1942/how2github/tree/main/03.how2-release)\
+:heavy_check_mark: 04.how2-actions : CLA, TravisCI, AddContributor, Badge, commitMsg-Chk, Hooks 사용법. -  [클릭!](https://github.com/gon1942/how2github/tree/main/04.how2-actions)\
+:heavy_check_mark: 05.how2-template : 
+[이슈 템플릿 파일](https://github.com/gon1942/how2github/blob/main/05.how2-template/issue_template.md), 
+[커밋 템플릿 파일](https://github.com/gon1942/how2github/blob/main/05.how2-template/commit_template.md), 
+[풀리퀘스트 템플릿 파일](https://github.com/gon1942/how2github/blob/main/05.how2-template/pr_template.md) \
+:heavy_check_mark: 05_how2_security : Dependabot, Security 사용법 - [클릭!](https://github.com/gon1942/how2github/tree/main/05_how2_security)\
+:heavy_check_mark: 06.how2-github : 깃 명령어, 권한 관리 - [클릭!](https://github.com/gon1942/how2github/tree/main/06.how2-github) \
+:heavy_check_mark: 07_이슈관리 : 이슈관리 - [클릭!](https://github.com/gon1942/how2github/blob/main/07_%EC%9D%B4%EC%8A%88%EA%B4%80%EB%A6%AC/About_Issue.md)
+
+
+
+
+&#xa0;
+
+<a href="#top">Back to top</a>
